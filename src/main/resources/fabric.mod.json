@@ -1,35 +1,37 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "fegsfauna",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Feg's Fauna",
+  "description": "Provides HWYLA tooltip with animal information",
   "authors": [
-    "Me!"
+    "Linguardium"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/Linguardium/HWYLA-FegsFauna",
+    "sources": "https://github.com/Linguardium/HWYLA-FegsFauna"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/fegsfauna/icon.png",
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
-    ]
+    "main": [ ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
-
+  "mixins": [ ],
+  "custom": {
+    "waila:plugins": {
+      "id": "fegsfauna:animalentitydata",
+      "initializer": "mod.linguardium.fegsfauna.FegsFaunaPlugin"
+    }
+  },
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.15.x"
+    "minecraft": "1.15.x",
+    "hwyla":">=1.9.22"
   },
   "suggests": {
     "flamingo": "*"
