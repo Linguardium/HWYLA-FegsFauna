@@ -8,6 +8,7 @@ import net.minecraft.world.World;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 
 import java.util.List;
 
@@ -20,9 +21,9 @@ public class FegsFaunaPlugin implements IWailaPlugin, IEntityComponentProvider, 
             if (tag != null && tag.contains("AnimalBreedingAge",3)) {
                 int breedingAge = tag.getInt("AnimalBreedingAge");
                 if (breedingAge < 0) {
-                    tooltip.add(new TranslatableText("info.fegsfauna.integer",new TranslatableText("info.fegsfauna.grow_count", -breedingAge)));
+                    tooltip.add(new TranslatableText("info.fegsfauna.integer",new TranslatableText("info.fegsfauna.grow_count").formatted(Formatting.WHITE), -breedingAge));
                 }else{
-                    tooltip.add(new TranslatableText("info.fegsfauna.integer",new TranslatableText("info.fegsfauna.breed_count", breedingAge)));
+                    tooltip.add(new TranslatableText("info.fegsfauna.integer",new TranslatableText("info.fegsfauna.breed_count").formatted(Formatting.RED), breedingAge));
                 }
             }
         }
