@@ -1,9 +1,12 @@
-# Fabric Example Mod
+# Feg's Fauna HWYLA mod
 
-## Setup
+## What is this
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+This mod adds Animal growth ticks and Animal breeding times to the HWYLA/WAILA tooltip
+
+## Credits
+This mod was made for /u/Fegelein_99 on reddit
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This mod is released under the MIT license
